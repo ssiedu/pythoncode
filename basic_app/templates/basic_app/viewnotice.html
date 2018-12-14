@@ -1,0 +1,31 @@
+{% extends "basic_app/base.html"%}
+{% block body_block %}
+
+
+    	<h1>List of Notices!</h1>
+        <hr>
+        <div class="jumbotron">
+        <table class="table-striped" width="100%">
+            <tr>
+                <th><h2>Notice Subject</h2></th>
+                <th><h2>Notice Date</h2></th>
+                <th><h2>Notice Category</h2></th>
+            </tr>
+
+                {% for notice in notices %}
+                    <tr>
+                        <td><h2><a href="{{ notice.id}}">{{ notice.notice_subject }}</a></h2></td>
+                        <td><h2>{{ notice.notice_date}}</h2></td>
+                        <td><h2>{{ notice.cname}}</h2></td>
+                    </tr>
+                {% endfor %}
+
+
+
+        </table>
+
+    </div>
+
+
+
+{% endblock %}

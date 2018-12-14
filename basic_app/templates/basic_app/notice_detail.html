@@ -1,0 +1,21 @@
+{% extends "basic_app/base.html"%}
+{% block body_block %}
+
+    <div class="jumbotron">
+        <h1>Welcome to Notice Detail Page</h1>
+        <h2>Notice Detail:</h2>
+        <div class="container">
+            {{ notice_detail.notice_subject }}
+        </div>
+        <div class="container">
+            {{ notice_detail.cname }}
+        </div>
+        <br>
+        <div class="container">
+            {{ notice_detail.notice_text }}
+        </div>
+    </div>
+
+
+
+{% endblock %}
